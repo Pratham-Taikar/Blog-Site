@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Blog-Site.com</title>
+  <link rel="stylesheet" href="/Blog-Site/dashboard.css">
+  <style>
+    .login-container {
+      max-width: 400px;
+      margin: 100px auto;
+      background: #1e1e1e;
+      padding: 30px;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .login-container h2 {
+      margin-bottom: 20px;
+    }
+
+    .login-container button {
+      padding: 12px 20px;
+      background: #1db954;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .login-container button:hover {
+      background: #17a34a;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <div class="logo">Blog-Site</div>
+    <div class="menu">
+      <a href="/Blog-Site/index.html">Home</a>
+    </div>
+  </nav>
+
+  <div class="login-container">
+    <h2>Sign in to Blog-Site</h2>
+    <button id="loginBtn">Sign In with Google</button>
+  </div>
+
+  <!-- Firebase Modular SDK (v10.x) via CDN -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+    import { getAuth, GoogleAuthProvider, signInWithPopup } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
+
+    // Your Firebase config (as environment vars don't work in browsers)
+    const firebaseConfig = {
+      apiKey: "AIzaSyBpAzgBA_xUVpBGANsJcrxryFbpCWewHUg",
+      authDomain: "blog-site-21bef.firebaseapp.com",
+      projectId: "blog-site-21bef",
+      storageBucket: "blog-site-21bef.appspot.com",
+      messagingSenderId: "749222118590",
+      appId: "1:749222118590:web:fc635e368cf18d73f48aef"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+
+    // Login button click event
+    document.getElementById("loginBtn").addEventListener("click", () => {
+      const provider = new GoogleAuthProvider();
+      signInWithPopup(auth, provider)
+        .then((result) => {
+          alert(`Welcome ${result.user.displayName}!`);
+          window.location.href = "/Blog-Site/index.html";
+        })
+        .catch((error) => {
+          alert("Authentication failed: " + error.message);
+        });
+    });
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,133 @@
+/* Basic Reset and Dark Background */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: #121212;
+  color: #e0e0e0;
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background: #1f1f1f;
+  color: #fff;
+}
+
+nav .logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+nav .menu a {
+  color: #ddd;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav .menu a:hover {
+  color: #1db954;
+}
+
+/* Form Styling */
+.form-container {
+  max-width: 500px;
+  margin: 30px auto;
+  background: #1e1e1e;
+  padding: 20px;
+  border-radius: 12px;
+  color: #eee;
+}
+
+.form-container h2 {
+  margin-bottom: 15px;
+}
+
+.form-container input,
+.form-container textarea,
+.form-container button {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: none;
+  background: #2e2e2e;
+  color: #fff;
+  font-size: 15px;
+}
+
+.form-container button {
+  background: #1db954;
+  cursor: pointer;
+}
+
+.form-container button:hover {
+  background: #17a34a;
+}
+
+/* Post List Styling */
+.post-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 30px;
+}
+
+
+.post-item {
+  background: #1e1e1e;
+  padding: 20px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post-item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.post-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.7);
+}
+
+.post-item .date {
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.post-item h2 {
+  margin: 15px 0 10px;
+  color: #fff;
+}
+
+.post-item p {
+  margin: 3px 0;
+  color: #ccc;
+}
+
+nav .menu button {
+  color: #ddd;
+  border: 0;
+  font-size: 16px;
+  background-color: transparent;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav .menu button:hover {
+  color: #1db954;
+}
