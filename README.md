@@ -1,21 +1,3 @@
-Excellent — let’s turn this into a fully detailed, professional, self-contained `README.md` that includes:
-
-✅ Full project description
-✅ Features
-✅ Tech stack
-✅ Project setup
-✅ Firebase configuration steps
-✅ Google Auth setup instructions
-✅ Error fixes you faced (domain authorization fix)
-✅ Git config issues and how to resolve them
-✅ Special thanks to Medium.com
-✅ Clean structure and polish
-
----
-
-## 📄 Final `README.md`
-
-````markdown
 # 📖 Blog-Site 🚀
 
 A clean, modern, and fully functional blog website built with **HTML, CSS, JavaScript**, and **Firebase Authentication**.  
